@@ -1,6 +1,7 @@
 require('dotenv').config()
 const discord = require('discord.js');
 const client = new discord.Client();
+const prefix = "/";
 client.on('ready', () => {
     console.log("Tudo certo!")
     console.log("Nome: "+ client.user.username)
@@ -10,10 +11,10 @@ client.on('ready', () => {
 client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return message.send("Sinto muito mas eu não aceito mensagens enviadas no meu privado!")
-    if(!message.content.startsWith(process.env.PREFIX)) return;
+    if(!message.content.startsWith(prefix)) return;
     var args = message.content.split(" ").slice(1);
     var command = message.content.split(" ")[0];
-    command = command.slice(process.env.PREFIX.length);
+    command = command.slice(prefix.length);
     let user = message.mentions.users.first() || message.author;
     try {
         commandFile = require(`./commands/${command}.js`);
@@ -25,4 +26,4 @@ client.on('message', async message => {
         message.channel.send(`O comando ${command}, possui algum problema ou não existe!`);
     }
 })
-client.login(process.env.TOKEN)
+client.login('ODAzMjk0MTU4MTg1OTU1MzQ5.YA7r-w.rjsh3-xRiA-T9rUSz056SEzivo8')
