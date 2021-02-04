@@ -1,0 +1,18 @@
+{
+  "name": "redemainstaff",
+  "version": "1.0.0",
+  "description": "Bot de discord staff redemain",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UmGamer_",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "minecraft-server-util": "^3.4.2",
+    "moment": "^2.29.1"
+  }
+}
