@@ -26,4 +26,4 @@ client.on('message', async message => {
         message.channel.send(`O comando ${command}, possui algum problema ou não existe!`);
     }
 })
-client.login('ODAzMjk0MTU4MTg1OTU1MzQ5.YA7r-w.rjsh3-xRiA-T9rUSz056SEzivo8')
+client.login('')
